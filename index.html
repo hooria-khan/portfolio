@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <style>
+    :root {
+      --bg-color: #f5f5f5;
+      --text-color: #333;
+      --header-bg: #333;
+      --header-text: #fff;
+      --accent: #1e90ff;
+    }
+
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #f5f5f5;
+      --header-bg: #1e1e1e;
+      --header-text: #fff;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      background: var(--header-bg);
+      color: var(--header-text);
+      padding: 40px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      object-fit: cover;
+    }
+
+    header h1 {
+      margin: 20px 0 10px;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 1.2em;
+    }
+
+    .toggle-theme {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .download-cv {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    section h2 {
+      border-bottom: 2px solid var(--text-color);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      background: #fff;
+      color: #333;
+      margin-bottom: 10px;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body.dark ul li {
+      background: #1e1e1e;
+      color: #f5f5f5;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    form input, form textarea {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    form button {
+      padding: 10px 20px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: var(--header-bg);
+      color: var(--header-text);
+      text-align: center;
+      padding: 20px;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    @media (max-width: 600px) {
+      header img {
+        width: 100px;
+        height: 100px;
+      }
+      header h1 {
+        font-size: 1.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button class="toggle-theme" onclick="toggleTheme()">Toggle Theme</button>
+    <img src="mypic.jpeg" alt="Profile Picture"/>
+    <h1>HOORIA IQBAL</h1>
+    <p>AI Engineer | Designer | Freelancer</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <p>
+        Hi! I'm Hooria iqbal, a passionate web developer with expertise in creating basic web design using html and css, file handling and automation using Python's OS module and creating chatbot. I love turning ideas into reality using code.
+      </p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML, CSS</li>
+        <li>Basics of Cybersecurity & AI</li>
+        <li>Python, C++</li>
+        <li>AI chatbots for websites.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <ul>
+        <li>No experience because I am a beginner now.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Library management:</strong> Built an online Library management and recommendation system using c++. <a href="qqqq.cpp" target="_blank">View</a></li>
+        <li><strong>File Handling:</strong> A fully functional code of file handling using python's OS module for file renaming. <a href="file_organizer.py" target="_blank">View</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Certificates</h2>
+      <ul>
+        <li><strong>Artificial Intelligence For Beginners Bootcamp</strong> -By HP foundation (2025) <a href="17f2e5f3-9273-49ea-8275-e232a8189f55.pdf" target="_blank">View Certificate</a></li>
+        <li><strong>Cybersecurity Awareness</strong> -By HP Foundation (2025) <a href="ba01bdd6-f1a7-4637-9843-b8801721bc9a.pdf" target="_blank">View Certificate</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <form action="mailto:hooriaiqbal357@gmail.com" method="POST" enctype="text/plain">
+        <input type="text" name="Name" placeholder="Your name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
+        <textarea name="Message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Your Name. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+
+    // Fade-in on scroll
+    const sections = document.querySelectorAll('section');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
